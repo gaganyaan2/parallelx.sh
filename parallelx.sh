@@ -62,7 +62,7 @@ function check_cpu_core_count(){
 check_cpu_core_count
 
 # Get list of directories
-list_of_directories=$(find /home/alok/Downloads/cryfs -maxdepth $directory_depth -type d | sort | sed -z 's|\n|,|g;s|,$|\n|')
+list_of_directories=$(find $directory_path -maxdepth $directory_depth -type d | sort | sed -z 's|\n|,|g;s|,$|\n|')
 
 # Convert String to Array
 OLD_IFS=$IFS
