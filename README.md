@@ -14,6 +14,12 @@ Usage: ./parallelx.sh [ -c number_of_concurrent_process ] [ -d directory_depth ]
 ./parallelx.sh -c 5 -d 3 chmod 644 /opt/jenkins
 ```
 
+### Install parllelx.sh:
+
+```bash
+curl -s https://raw.githubusercontent.com/koolwithk/parallelx.sh/main/install.sh | sudo bash
+```
+
 ### Prerequisites
 - directories name should not contain comma(,)
 - required command `nproc find sort sed screen`
