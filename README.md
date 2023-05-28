@@ -24,3 +24,14 @@ After moving 650GB of jenkins data(/var/lib/jenkins) containing small small file
 
 ### Limitation
 - Not good with running this script on small data as it will take more time than normal chmod or chown command
+
+### Alternatives 
+Below are some alternative methods but it still has some limitations like how recursive commands will run with directory depth, and does give progress status.
+
+- GNU Parallel - https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/
+- parallel_alternatives - https://www.gnu.org/software/parallel/parallel_alternatives.html
+- https://stackoverflow.com/questions/30733158/s3fs-recursive-chown-chmod-takes-a-long-time
+- https://serverfault.com/questions/796330/how-do-i-set-destination-permissions-with-rsync-chown-chmod
+
+### Some questions
+- https://www.reddit.com/r/devops/comments/13tk8rj/parllelxsh_run_chmod_or_chown_command_parallelly/
