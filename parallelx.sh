@@ -79,8 +79,7 @@ for i in $(seq 0 $((${#list_of_directories_array[@]}-1)))
 do
     if [ "$(echo ${list_of_directories_array[$i+1]} | grep -o "${list_of_directories_array[$i]}" )" = "${list_of_directories_array[$i]}" ]
     then
-        screen -A -m -d $cmd $cmd_opt "${list_of_directories_array[$i]}"
-        screen -A -m -d $cmd $cmd_opt "${list_of_directories_array[$i]}"/*
+        screen -A -m -d $cmd $cmd_opt "${list_of_directories_array[$i]}" "${list_of_directories_array[$i]}"/*
     else
         screen -A -m -d $cmd -R $cmd_opt "${list_of_directories_array[$i]}"
     fi
@@ -90,7 +89,6 @@ do
         screen_process_count=$(ps -ef | grep SCREE[N] | grep $cmd | wc -l)
         if (( $screen_process_count >= $input_core ))
         then
-            sleep 0.2
             echo "$screen_process_count screen process is running in background...Do not close..."
         else
             echo "$i screen command sent to background...Do not close..."
