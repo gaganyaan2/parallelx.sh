@@ -104,7 +104,6 @@ do
     screen_process_count=$(ps -ef | grep SCREE[N] | grep $cmd | wc -l)
     if (( $screen_process_count > 0 ))
     then
-        sleep 2
         echo "$screen_process_count screen process is running in background...Do not close..."
     else
         echo "all screen command completed..."
